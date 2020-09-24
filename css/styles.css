@@ -1,0 +1,407 @@
+/*============== Site ==============*/
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	scroll-snap-type: y mandatory;
+	scroll-snap-stop: always;
+	scroll-behavior: smooth;
+}
+a {
+	outline: none;
+}
+
+/*============= Color Theme =============*/
+:root {
+	--primary: #21dbcc;
+	--secondary: #1a2adb;
+	--p1-primary: #16189c;
+	--p1-secondary: #000;
+	--p2-primary: #16189c;
+	--p2-secondary: #000;
+	--cyan: rgb(78, 158, 158);
+}
+
+/*============ Scrollbar ============*/
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+	border: 1px gray solid;
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	/*changes scrollbar gradient color*/
+	background-image: linear-gradient(
+		rgb(93, 192, 192),
+		rgb(78, 158, 158),
+		rgb(55, 76, 110)
+	);
+}
+
+/*=========== Navigation ===========*/
+.nav {
+	position: fixed;
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: white;
+	z-index: 1;
+}
+.nav img {
+	width: 3%;
+	height: auto;
+	margin-left: 0;
+	margin-right: auto;
+	padding: 0 15px;
+}
+.nav .current {
+	width: fit-content;
+	height: fit-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.nav .current .underline {
+	position: absolute;
+	width: 5%;
+	height: 1px;
+	top: 50px;
+	background-color: var(--primary);
+}
+.nav a {
+	position: relative;
+	padding: 20px;
+	color: black;
+	text-decoration: none;
+	font-family: "Quicksand";
+	font-size: 15px;
+	transition: all 0.5s;
+}
+.nav a:hover {
+	color: gray;
+}
+.nav .vote {
+	padding: 20px 30px;
+	background-color: black;
+	color: white;
+}
+.nav .vote:hover {
+	background-color: darkgrey;
+	color: black;
+}
+
+/*============= Home ============*/
+.home {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	scroll-snap-align: start;
+}
+/* Header */
+.home .header {
+	position: relative;
+	width: 100%;
+	height: 40%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.home .header h1 {
+	margin: 0;
+	font-family: "Quicksand";
+	font-size: 40px;
+}
+.home .header p {
+	font-family: "Quicksand";
+	font-size: 20px;
+}
+.home .header a {
+	position: absolute;
+	font-size: 30px;
+	color: black;
+	margin-top: 12%;
+}
+.home .header div {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/mouse-scroll.png);
+	background-size: cover;
+}
+.home .header a {
+	animation-name: icon-bob;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes icon-bob {
+	0% {
+		margin-top: 12%;
+	}
+	50% {
+		margin-top: 13%;
+	}
+	100% {
+		margin-top: 12%;
+	}
+}
+.home .banner {
+	position: relative;
+	width: 100%;
+	height: 50%;
+	background-image: url(../images/banner.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+}
+/* Information */
+.info {
+	width: 70%;
+	height: 100%;
+	margin: 0 15%;
+	scroll-snap-align: start;
+}
+.info .header {
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.info .header h1 {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 40px;
+	font-family: "Quicksand";
+}
+.info .header h1::after {
+	content: "";
+	margin-top: 2%;
+	width: 60%;
+	height: 1px;
+	background-color: var(--primary);
+}
+.info .text-cont {
+	width: fit-content;
+	height: fit-content;
+}
+.info .text-cont p {
+	font-size: 25px;
+	font-family: "Quicksand";
+}
+.info .text-cont a {
+	font-size: 20px;
+	color: black;
+	font-family: "Quicksand";
+	text-decoration: none;
+}
+.info .text-cont a i {
+	font-size: 10px;
+}
+.info .btn-cont {
+	position: relative;
+	width: 100%;
+	height: 30%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.info .btn-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+.info .btn-cont a {
+	width: fit-content;
+	height: fit-content;
+	padding: 10px 15px;
+	border-radius: 10px;
+	color: white;
+	text-decoration: none;
+	font-family: "Quicksand";
+	font-size: 15px;
+}
+.info .btn-cont .isaac-btn {
+	background-color: var(--p1-primary);
+}
+.info .btn-cont .wilhelm-btn {
+	background-color: var(--p2-primary);
+}
+
+/*================ Code =================*/
+.code {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	scroll-snap-align: start;
+}
+.code .text-cont {
+	width: 70%;
+	height: 90%;
+	margin: 0 15%;
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.code .text-cont h1 {
+	width: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 40px;
+	font-family: "Quicksand";
+}
+.code .text-cont h1::after {
+	content: "";
+	margin-top: 2%;
+	width: 20%;
+	height: 1px;
+	background-color: var(--primary);
+}
+.code .text-cont p {
+	margin: 0;
+	font-size: 25px;
+	font-family: "Quicksand";
+}
+.code .text-cont img {
+	width: 30vw;
+	height: auto;
+	margin: auto auto 0 auto;
+}
+
+/*================ Color Theme ===============*/
+.color {
+	position: relative;
+	width: 70%;
+	height: 80%;
+	margin: 0 15%;
+	display: flex;
+	align-items: center;
+	scroll-snap-align: start;
+}
+.color .column1 {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-items: center;
+}
+.color .column2 {
+	width: 50%;
+	height: 50%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-items: flex-start;
+}
+.color .column2 h1 {
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 40px;
+	font-family: "Quicksand";
+}
+.color .column2 h1::after {
+	content: "";
+	margin-top: 2%;
+	width: 50%;
+	height: 1px;
+	background-color: var(--primary);
+}
+.color .column2 p {
+	margin: 0;
+	font-size: 25px;
+	font-family: "Quicksand";
+}
+.color .column1 img {
+	width: 20vw;
+	height: auto;
+	margin: auto;
+}
+
+/*================ Footer =============*/
+.footer {
+	position: relative;
+	width: 100%;
+	height: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	scroll-snap-align: end;
+}
+.footer a {
+	font-size: 15px;
+	text-decoration: none;
+	color: black;
+	font-family: "Quicksand";
+}
+.footer a:hover {
+	color: gray;
+}
+.footer .big {
+	height: fit-content;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer .big a {
+	font-size: 15px;
+}
+.footer .big a:hover {
+	color: gray;
+}
+.footer .big::before,
+.big::after {
+	margin: 0 20px;
+	width: 30rem;
+	display: inline-block;
+	content: "";
+	border-top: 1px solid black;
+}
+.footer .links {
+	width: 70%;
+	height: 60%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+.footer .links .footer-nav {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
+	flex-direction: column;
+}
+.footer .links .more-info {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-direction: column;
+}
+.footer .links .more-info p {
+	color: black;
+	font-family: "Quicksand";
+	font-size: 15px;
+}
