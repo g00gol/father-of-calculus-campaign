@@ -4,12 +4,33 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	scroll-snap-type: y mandatory;
+	scroll-snap-type: y proximity;
 	scroll-snap-stop: always;
 	scroll-behavior: smooth;
 }
 a {
 	outline: none;
+}
+.mouse-scroll {
+	width: 50px;
+	height: 50px;
+	background-image: url(../images/mouse-scroll.png);
+	background-size: cover;
+	animation-name: icon-bob;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+@keyframes icon-bob {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(1vw);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
 
 /*============= Color Theme =============*/
@@ -98,11 +119,21 @@ body::-webkit-scrollbar-thumb {
 	color: black;
 }
 
+/*
+
+===================================== Home Page =========================================
+
+*/
+
 /*============= Home ============*/
 .home {
 	position: relative;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 	background-color: white;
 	scroll-snap-align: start;
 }
@@ -110,7 +141,8 @@ body::-webkit-scrollbar-thumb {
 .home .header {
 	position: relative;
 	width: 100%;
-	height: 40%;
+	height: 20%;
+	margin-top: 5%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -125,49 +157,29 @@ body::-webkit-scrollbar-thumb {
 	font-family: "Quicksand";
 	font-size: 20px;
 }
-.home .header a {
-	position: absolute;
-	font-size: 30px;
-	color: black;
-	margin-top: 12%;
-}
-.home .header div {
-	width: 50px;
-	height: 50px;
-	background-image: url(../images/mouse-scroll.png);
-	background-size: cover;
-}
-.home .header a {
-	animation-name: icon-bob;
-	animation-duration: 1s;
-	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
-}
-@keyframes icon-bob {
-	0% {
-		margin-top: 12%;
-	}
-	50% {
-		margin-top: 13%;
-	}
-	100% {
-		margin-top: 12%;
-	}
-}
 .home .banner {
 	position: relative;
 	width: 100%;
-	height: 50%;
+	height: 40%;
 	background-image: url(../images/banner.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
+}
+.home a {
+	width: fit-content;
+	height: fit-content;
+	margin-bottom: 4%;
+	z-index: 1;
 }
 /* Information */
 .info {
 	width: 70%;
 	height: 100%;
 	margin: 0 15%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	scroll-snap-align: start;
 }
 .info .header {
@@ -191,7 +203,7 @@ body::-webkit-scrollbar-thumb {
 	content: "";
 	margin-top: 2%;
 	width: 60%;
-	height: 1px;
+	height: 0.1px;
 	background-color: var(--primary);
 }
 .info .text-cont {
@@ -201,15 +213,6 @@ body::-webkit-scrollbar-thumb {
 .info .text-cont p {
 	font-size: 25px;
 	font-family: "Quicksand";
-}
-.info .text-cont a {
-	font-size: 20px;
-	color: black;
-	font-family: "Quicksand";
-	text-decoration: none;
-}
-.info .text-cont a i {
-	font-size: 10px;
 }
 .info .btn-cont {
 	position: relative;
@@ -240,76 +243,27 @@ body::-webkit-scrollbar-thumb {
 	background-color: var(--p2-primary);
 }
 
-/*================ Code =================*/
+/*================ Code ===============*/
 .code {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	display: flex;
-	align-items: flex-end;
-	scroll-snap-align: start;
-}
-.code .text-cont {
-	width: 70%;
-	height: 90%;
-	margin: 0 15%;
-	display: flex;
-	align-items: flex-start;
 	flex-wrap: wrap;
-}
-.code .text-cont h1 {
-	width: 100%;
-	margin: 0;
-	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	font-size: 40px;
-	font-family: "Quicksand";
-}
-.code .text-cont h1::after {
-	content: "";
-	margin-top: 2%;
-	width: 20%;
-	height: 1px;
-	background-color: var(--primary);
-}
-.code .text-cont p {
-	margin: 0;
-	font-size: 25px;
-	font-family: "Quicksand";
-}
-.code .text-cont img {
-	width: 30vw;
-	height: auto;
-	margin: auto auto 0 auto;
-}
-
-/*================ Color Theme ===============*/
-.color {
-	position: relative;
-	width: 70%;
-	height: 80%;
-	margin: 0 15%;
-	display: flex;
-	align-items: center;
 	scroll-snap-align: start;
 }
-.color .column1 {
-	width: 50%;
-	height: 100%;
-	display: flex;
-	justify-items: center;
-}
-.color .column2 {
-	width: 50%;
+.code .column1 {
+	width: 35%;
 	height: 50%;
+	margin-left: 15%;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-items: flex-start;
 }
-.color .column2 h1 {
+.code .column1 h1 {
 	width: 100%;
 	margin: 0;
 	display: flex;
@@ -317,25 +271,302 @@ body::-webkit-scrollbar-thumb {
 	font-size: 40px;
 	font-family: "Quicksand";
 }
-.color .column2 h1::after {
+.code .column1 h1::after {
 	content: "";
 	margin-top: 2%;
-	width: 50%;
-	height: 1px;
+	width: 70%;
+	height: 0.1px;
 	background-color: var(--primary);
 }
-.color .column2 p {
+.code .column1 p {
 	margin: 0;
 	font-size: 25px;
 	font-family: "Quicksand";
 }
-.color .column1 img {
+.code .column2 {
+	width: 35%;
+	height: 50%;
+	margin-right: 15%;
+	display: flex;
+	justify-items: center;
+}
+.code .column2 img {
+	width: 25vw;
+	height: auto;
+	margin: auto;
+}
+
+/*================ Our Contribution ===============*/
+.our-contribution {
+	position: relative;
+	width: 100%;
+	height: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	scroll-snap-align: start;
+}
+.our-contribution .column1 {
+	width: 35%;
+	height: 50%;
+	margin-left: 15%;
+	display: flex;
+	justify-items: center;
+}
+.our-contribution .column2 {
+	width: 35%;
+	height: 50%;
+	margin-right: 15%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-items: flex-start;
+}
+.our-contribution .column2 h1 {
+	width: 100%;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	font-size: 40px;
+	font-family: "Quicksand";
+}
+.our-contribution .column2 h1::after {
+	content: "";
+	margin-top: 2%;
+	width: 50%;
+	height: 0.1px;
+	background-color: var(--primary);
+}
+.our-contribution .column2 p {
+	margin: 0;
+	font-size: 25px;
+	font-family: "Quicksand";
+}
+.our-contribution .column1 img {
 	width: 20vw;
 	height: auto;
 	margin: auto;
 }
 
-/*================ Footer =============*/
+/*================= Side Navigation ================*/
+.side-nav {
+	position: fixed;
+	width: 5%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.side-nav a {
+	width: fit-content;
+	height: fit-content;
+	margin: 15% 0;
+}
+.side-nav a i {
+	color: black;
+	font-size: 25px;
+}
+
+/*
+
+===================================== Sir Isaac Newton Page =========================================
+
+*/
+
+/*================= Header ==============*/
+.isaac-header {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	scroll-snap-align: start;
+}
+.isaac-header::after {
+	content: "";
+	margin-top: 15%;
+	width: 45%;
+	height: 0.1px;
+	background-color: black;
+}
+.isaac-header .text-cont {
+	width: 100%;
+	height: 15%;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.isaac-header .text-cont h1 {
+	margin: 0;
+	letter-spacing: 5px;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.isaac-header .text-cont p {
+	margin: 0;
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+.isaac-header .banner {
+	width: 60%;
+	height: 50%;
+	background-image: url(../images/newton-background.jpg);
+	background-size: cover;
+	background-position: top;
+}
+
+/*================ Biography ================*/
+.isaac-bio {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.isaac-bio .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.isaac-bio .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+.isaac-bio .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.isaac-bio .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+
+/*================ Contribution =================*/
+.isaac-contribution {
+	width: 100%;
+	height: 100%;
+}
+
+/*================= Why Vote ==================*/
+.isaac-vote {
+	width: 100%;
+	height: 80%;
+}
+
+/*
+
+================================= Gottfried Wilhelm Leibniz ==============================
+
+*/
+
+/*================= Header ==============*/
+.wilhelm-header {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	scroll-snap-align: start;
+}
+.wilhelm-header::after {
+	content: "";
+	margin-top: 15%;
+	width: 45%;
+	height: 0.1px;
+	background-color: black;
+}
+.wilhelm-header .text-cont {
+	width: 100%;
+	height: 15%;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.wilhelm-header .text-cont h1 {
+	margin: 0;
+	letter-spacing: 5px;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.wilhelm-header .text-cont p {
+	margin: 0;
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+.wilhelm-header .banner {
+	width: 60%;
+	height: 50%;
+	background-image: url(../images/wilhelm-background.jpg);
+	background-size: cover;
+	background-position: center top;
+}
+
+/*================ Biography ================*/
+.wilhelm-bio {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.wilhelm-bio .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wilhelm-bio .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.wilhelm-bio .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+.wilhelm-bio .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+
+/*================ Contribution =================*/
+.wilhelm-contribution {
+	width: 100%;
+	height: 100%;
+}
+
+/*================= Why Vote ==================*/
+.wilhelm-vote {
+	width: 100%;
+	height: 80%;
+}
+
+/*
+
+============================================== Footer =====================================================
+
+*/
 .footer {
 	position: relative;
 	width: 100%;
