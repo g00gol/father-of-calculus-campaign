@@ -401,8 +401,8 @@ body::-webkit-scrollbar-thumb {
 	content: "";
 	margin-top: 15%;
 	width: 45%;
-	height: 0.1px;
-	background-color: black;
+	height: 1px;
+	background-color: var(--p1-primary);
 }
 .isaac-header .text-cont {
 	width: 100%;
@@ -415,6 +415,7 @@ body::-webkit-scrollbar-thumb {
 }
 .isaac-header .text-cont h1 {
 	margin: 0;
+	color: var(--p1-primary);
 	letter-spacing: 5px;
 	font-size: 40px;
 	font-family: "Merriweather";
@@ -469,7 +470,11 @@ body::-webkit-scrollbar-thumb {
 /*================ Contribution =================*/
 .isaac-contribution {
 	width: 100%;
-	height: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 .isaac-contribution .text-cont {
 	width: 70%;
@@ -546,8 +551,8 @@ body::-webkit-scrollbar-thumb {
 	content: "";
 	margin-top: 15%;
 	width: 45%;
-	height: 0.1px;
-	background-color: black;
+	height: 1px;
+	background-color: var(--p2-primary);
 }
 .wilhelm-header .text-cont {
 	width: 100%;
@@ -560,6 +565,7 @@ body::-webkit-scrollbar-thumb {
 }
 .wilhelm-header .text-cont h1 {
 	margin: 0;
+	color: var(--p2-primary);
 	letter-spacing: 5px;
 	font-size: 40px;
 	font-family: "Merriweather";
@@ -614,12 +620,16 @@ body::-webkit-scrollbar-thumb {
 /*================ Contribution =================*/
 .wilhelm-contribution {
 	width: 100%;
-	height: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 .wilhelm-contribution .text-cont {
 	width: 70%;
 	height: fit-content;
-	margin: 5% 0;
+	margin-top: 5%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
