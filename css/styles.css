@@ -35,7 +35,7 @@ a {
 
 /*============= Color Theme =============*/
 :root {
-	--primary: #21dbcc;
+	--primary: #0092fe;
 	--secondary: #1a2adb;
 	--p1-primary: #ffaa04;
 	--p1-secondary: #000;
@@ -212,6 +212,7 @@ body::-webkit-scrollbar-thumb {
 .info .text-cont p {
 	font-size: 25px;
 	font-family: "Quicksand";
+	text-align: center;
 }
 .info .btn-cont {
 	position: relative;
@@ -220,6 +221,9 @@ body::-webkit-scrollbar-thumb {
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+}
+.info .btn-cont span {
+	text-align: center;
 }
 .info .btn-cont p {
 	font-size: 20px;
