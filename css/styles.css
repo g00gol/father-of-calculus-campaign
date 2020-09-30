@@ -471,11 +471,59 @@ body::-webkit-scrollbar-thumb {
 	width: 100%;
 	height: 100%;
 }
+.isaac-contribution .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.isaac-contribution .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+.isaac-contribution .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.isaac-contribution .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
+}
 
 /*================= Why Vote ==================*/
 .isaac-vote {
 	width: 100%;
 	height: 80%;
+}
+.isaac-vote .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.isaac-vote .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+.isaac-vote .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.isaac-vote .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
 }
 
 /*
@@ -567,6 +615,30 @@ body::-webkit-scrollbar-thumb {
 .wilhelm-contribution {
 	width: 100%;
 	height: 100%;
+}
+.wilhelm-contribution .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wilhelm-contribution .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+.wilhelm-contribution .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.wilhelm-contribution .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
 }
 
 /*================= Why Vote ==================*/
