@@ -11,6 +11,11 @@
 			href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
 			rel="stylesheet"
 		/>
+		<!--Merriweather-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+			rel="stylesheet"
+		/>
 		<!--JQuery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--Javascript-->
@@ -19,12 +24,35 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<!--FontAwesome v4.7-->
-		<script src="https://use.fontawesome.com/0e39fee30a.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/solid.css"
+			integrity="sha384-TN9eFVoW87zV3Q7PfVXNZFuCwsmMwkuOTOUsyESfMS9uwDTf7yrxXH78rsXT3xf0"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/regular.css"
+			integrity="sha384-e46AbGhCSICtPh8xpc35ZioOrHg2PGsH1Bpy/vyr9AhEMVhttzxc+2GSMSP+Y60P"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/brands.css"
+			integrity="sha384-MiOGyNsVTeSVUjE9q/52dpdZjrr7yQAjVRUs23Bir5NhrTq0YA0rny4u/qe4dxNj"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/fontawesome.css"
+			integrity="sha384-PRy/NDAXVTUcXlWA3voA+JO/UMtzWgsYuwMxjuu6DfFPgzJpciUiPwgsvp48fl3p"
+			crossorigin="anonymous"
+		/>
 	</head>
 
 	<body>
 		<!--Navigation-->
-		<div class="nav" data-aos="fade-right" data-aos-duration="700">
+		<div class="nav">
 			<a href="../html/index.html">Home</a>
 			<span class="current">
 				<a href="../html/isaac.html">Isaac Newton</a>
@@ -32,6 +60,86 @@
 			</span>
 			<a href="../html/wilhelm.html">Wilhelm Leibniz</a>
 			<a class="vote" href="../html/vote.html">Vote Here</a>
+		</div>
+
+		<!--Side Navigation-->
+		<div class="side-nav">
+			<a href="#top"><i class="fas fa-house-user"></i></a>
+			<a href="#bio"><i class="fa fa-book"></i></a>
+			<a href="#contribution"><i class="fa fa-question-circle"></i></a>
+			<a href="#vote"><i class="fa fa-poll"></i></a>
+		</div>
+
+		<!--Header-->
+		<div class="isaac-header">
+			<!--Text Container-->
+			<div class="text-cont">
+				<h1>Sir Isaac Newton</h1>
+				<p>by Madi Crum</p>
+			</div>
+
+			<!--Banner-->
+			<div class="banner"></div>
+		</div>
+
+		<!--Biography-->
+		<div id="bio" class="isaac-bio">
+			<div class="text-cont">
+				<img
+					src="../images/isaac-icon.png"
+					alt="isaac icon"
+					style="width: 100px; height: auto; margin: 0"
+				/>
+				<p style="font-size: 15px">January 4, 1693 - March 31, 1727</p>
+				<h1>Lorem ipsum</h1>
+				<p>
+					Commodo velit non et cillum et incididunt dolor ad culpa. Voluptate
+					consequat voluptate anim dolor ad sit adipisicing eu excepteur qui
+					sunt adipisicing. Id excepteur exercitation commodo ullamco et in
+					cupidatat irure reprehenderit ullamco sunt. Est officia dolore enim
+					sit velit velit do in sunt. Ullamco excepteur sint non ut fugiat
+					consequat irure consectetur et consectetur ipsum non pariatur nostrud.
+					Ullamco ex dolor aute ex exercitation occaecat commodo exercitation
+					dolore veniam minim duis. Dolore occaecat cillum mollit consequat
+					laborum esse et nostrud duis veniam aute.
+				</p>
+				<img src="" alt="isaac image" />
+				<p>
+					Voluptate sit laboris Lorem laboris veniam in non nisi commodo Lorem
+					consequat laboris ullamco. Ipsum nostrud quis anim proident aliqua
+					ullamco proident ullamco. Elit elit dolore aute et officia cillum ad
+					dolore fugiat exercitation veniam cupidatat ullamco est. Ipsum
+					proident pariatur sunt duis aliquip deserunt proident excepteur ex. Ut
+					nulla commodo ut irure deserunt. Velit do reprehenderit cupidatat
+					aute. Ex adipisicing aliqua sit excepteur.
+				</p>
+			</div>
+		</div>
+
+		<!--Contribution-->
+		<div id="contribution" class="isaac-contribution"></div>
+
+		<!--Why Vote-->
+		<div id="vote" class="isaac-vote"></div>
+
+		<!--Footer-->
+		<div id="footer" class="footer">
+			<!--Back To Top-->
+			<div class="big"><a href="#top">Back To Top</a></div>
+			<!--Links-->
+			<div class="links">
+				<!--Footer Navigation-->
+				<div class="footer-nav">
+					<a href="../html/index.html">Home</a>
+					<a href="../html/isaac.html">Isaac Newton</a>
+					<a href="../html/wilhelm.html">Wilhelm Leibniz</a>
+					<a href="../html/vote.html">Vote</a>
+				</div>
+				<!--More Information-->
+				<div class="more-info">
+					<p>by Jackey Yang and Madi Crum</p>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

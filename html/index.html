@@ -13,6 +13,11 @@
 			href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
 			rel="stylesheet"
 		/>
+		<!--Merriweather-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+			rel="stylesheet"
+		/>
 		<!--JQuery-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<!--Javascript-->
@@ -21,12 +26,35 @@
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 		<!--FontAwesome v4.7-->
-		<script src="https://use.fontawesome.com/0e39fee30a.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/solid.css"
+			integrity="sha384-TN9eFVoW87zV3Q7PfVXNZFuCwsmMwkuOTOUsyESfMS9uwDTf7yrxXH78rsXT3xf0"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/regular.css"
+			integrity="sha384-e46AbGhCSICtPh8xpc35ZioOrHg2PGsH1Bpy/vyr9AhEMVhttzxc+2GSMSP+Y60P"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/brands.css"
+			integrity="sha384-MiOGyNsVTeSVUjE9q/52dpdZjrr7yQAjVRUs23Bir5NhrTq0YA0rny4u/qe4dxNj"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.14.0/css/fontawesome.css"
+			integrity="sha384-PRy/NDAXVTUcXlWA3voA+JO/UMtzWgsYuwMxjuu6DfFPgzJpciUiPwgsvp48fl3p"
+			crossorigin="anonymous"
+		/>
 	</head>
 
 	<body>
 		<!--Navigation-->
-		<div class="nav" data-aos="fade-right" data-aos-duration="700">
+		<div class="nav">
 			<img src="../images/favicon.png" alt="logo" />
 			<span class="current">
 				<a href="../html/index.html">Home</a>
@@ -43,9 +71,9 @@
 			<div class="header" data-aos="fade-down" data-aos-duration="700">
 				<h1>The Father of Calculus</h1>
 				<p>By Jackey Yang and Madi Crum</p>
-				<a href="#info"><div></div></a>
 			</div>
-			<div class="banner" data-aos="fade-up" data-aos-duration="700"></div>
+			<div class="banner" data-aos="fade-right" data-aos-duration="700"></div>
+			<a href="#info"><div class="mouse-scroll"></div></a>
 		</div>
 
 		<!--Information-->
@@ -64,9 +92,6 @@
 					controversy as the public insisted to select only one candidate as its
 					true founder.
 				</p>
-				<a href="#code"
-					>How We Made This Site <i class="fa fa-chevron-down"></i
-				></a>
 			</div>
 			<!--Buttons-->
 			<div class="btn-cont">
@@ -79,29 +104,32 @@
 					<a class="wilhelm-btn" href="../html/wilhelm.html">Learn More</a>
 				</span>
 			</div>
+			<!--Icon-->
+			<a href="#code">
+				<div class="mouse-scroll"></div>
+			</a>
 		</div>
 
 		<!--Code-->
 		<div id="code" class="code">
-			<!--How-->
-			<div class="text-cont">
+			<div class="column1">
 				<h1>Behind the Scenes</h1>
 				<p>
-					Id deserunt commodo in ea dolore. Quis enim proident excepteur nulla
-					labore aliquip nostrud eiusmod duis duis cupidatat. Aliqua sit duis
-					nostrud consequat sunt ut culpa nostrud aute sunt sint nulla sunt.
-					Commodo eiusmod cupidatat veniam do. Cupidatat voluptate anim
-					voluptate dolore culpa. Minim nostrud irure aliquip nisi voluptate
-					dolore Lorem commodo culpa enim esse proident in. Veniam aliqua magna
-					deserunt laboris et. Enim culpa sit id sint duis qui officia in ea
-					duis qui cupidatat.
+					Minim est duis ut veniam mollit occaecat Lorem amet laborum. Ea enim
+					eiusmod pariatur aliquip incididunt enim sit labore minim aliquip. Do
+					excepteur officia adipisicing magna non tempor qui esse amet minim
+					tempor fugiat anim cupidatat.
 				</p>
+				<a href=""></a>
+			</div>
+			<div class="column2">
 				<img src="../images/project-team.svg" alt="project-team" />
 			</div>
+			<a href="#contribution"><div class="mouse-scroll"></div></a>
 		</div>
 
-		<!--Color-->
-		<div class="color">
+		<!--Our Contribution-->
+		<div id="contribution" class="our-contribution">
 			<div class="column1">
 				<img src="../images/color-theme.svg" alt="color-theme" />
 			</div>
