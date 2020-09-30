@@ -255,7 +255,7 @@ body::-webkit-scrollbar-thumb {
 }
 .code .column1 {
 	width: 35%;
-	height: 65%;
+	height: 60%;
 	margin-left: 15%;
 	display: flex;
 	flex-wrap: wrap;
@@ -294,7 +294,7 @@ body::-webkit-scrollbar-thumb {
 }
 .code .column2 {
 	width: 35%;
-	height: 65%;
+	height: 60%;
 	margin-right: 15%;
 	display: flex;
 	justify-items: center;
@@ -369,6 +369,7 @@ body::-webkit-scrollbar-thumb {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	z-index: 1;
 }
 .side-nav a {
 	width: fit-content;
