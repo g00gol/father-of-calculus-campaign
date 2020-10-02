@@ -39,6 +39,50 @@
 			</span>
 		</div>
 
+		<!--Voting Container-->
+		<div class="vote-cont">
+			<!--Text Container-->
+			<div id="vote-text-cont" class="text-cont">
+				<!--Column 1 (Isaac Newton)-->
+				<div class="column1">
+					<h1>Sir Isaac Newton</h1>
+					<img src="../images/isaac-icon.png" alt="isaac icon" />
+					<button onclick="isaacGraph()">Vote Isaac</button>
+				</div>
+				<!--Column 2 (Wilhelm)-->
+				<div class="column2">
+					<h1>Gottfried Wilhelm Leibniz</h1>
+					<img src="../images/wilhelm-icon.png" alt="wilhelm icon" />
+					<button onclick="wilhelmGraph()">Vote Wilhelm</button>
+				</div>
+			</div>
+
+			<!--Bar Graph-->
+			<div class="bar-graph">
+				<span class="isaac-bar">
+					<img id="isaac-img" src="../images/isaac-icon.png" alt="isaac icon" />
+					<div id="isaac-bar" class="bar">
+						<p id="count"></p>
+						<p>%</p>
+					</div>
+				</span>
+				<span class="wilhelm-bar">
+					<img
+						id="wilhelm-img"
+						src="../images/wilhelm-icon.png"
+						alt="wilhelm icon"
+					/>
+					<div id="wilhelm-bar" class="bar">
+						<p id="count"></p>
+						<p>%</p>
+					</div>
+				</span>
+			</div>
+		</div>
+
+		<!--More-->
+		<div class="more"></div>
+
 		<!--Footer-->
 		<div id="footer" class="footer">
 			<!--Back To Top-->

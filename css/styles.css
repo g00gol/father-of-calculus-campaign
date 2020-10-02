@@ -8,7 +8,8 @@ body {
 	scroll-snap-stop: always;
 	scroll-behavior: smooth;
 }
-a {
+a,
+button {
 	outline: none;
 }
 .mouse-scroll {
@@ -37,10 +38,10 @@ a {
 :root {
 	--primary: #0092fe;
 	--secondary: #1a2adb;
-	--p1-primary: #ffaa04;
-	--p1-secondary: #000;
+	--p1-primary: #ff2b80;
+	--p1-secondary: #ff8cba;
 	--p2-primary: #7377e5;
-	--p2-secondary: #000;
+	--p2-secondary: #a3a5e6;
 	--cyan: rgb(78, 158, 158);
 }
 
@@ -73,7 +74,7 @@ body::-webkit-scrollbar-thumb {
 	justify-content: flex-end;
 	align-items: center;
 	background-color: white;
-	z-index: 1;
+	z-index: 2;
 }
 .nav img {
 	width: 3%;
@@ -375,6 +376,12 @@ body::-webkit-scrollbar-thumb {
 	align-items: center;
 	z-index: 1;
 }
+#isaac-sn i {
+	color: var(--p1-secondary);
+}
+#wilhelm-sn i {
+	color: var(--p2-secondary);
+}
 .side-nav a {
 	width: fit-content;
 	height: fit-content;
@@ -660,6 +667,141 @@ body::-webkit-scrollbar-thumb {
 	width: 100%;
 	height: 80%;
 }
+
+/*
+
+============================================== Voting ==============================================
+
+*/
+
+/*============== Voting Container ==============*/
+.vote-cont {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+}
+.vote-cont img {
+	width: 300px;
+	height: auto;
+}
+.vote-cont h1 {
+	font-size: 40px;
+	color: white;
+	font-family: "Merriweather";
+	z-index: 1;
+}
+.vote-cont button {
+	margin: 50px 25px;
+	padding: 2% 3%;
+	border-radius: 30px;
+	border: none;
+	font-size: 20px;
+	color: white;
+	cursor: pointer;
+}
+/*Text Container*/
+.vote-cont .text-cont {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: opacity 0.5s;
+}
+.vote-cont .text-cont .column1 {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--p1-secondary);
+}
+.vote-cont .text-cont .column1 button {
+	background-color: var(--p1-primary);
+	border: solid 1px var(--p1-primary);
+	box-shadow: inset 5px 5px 5px var(--p1-secondary);
+	transition: box-shadow 0.2s;
+}
+.vote-cont .text-cont .column1 button:active {
+	box-shadow: inset -5px -5px 5px var(--p1-secondary);
+}
+.vote-cont .text-cont .column2 {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--p2-secondary);
+}
+.vote-cont .text-cont .column2 button {
+	background-color: var(--p2-primary);
+	border: solid 1px var(--p2-primary);
+	box-shadow: inset 5px 5px 5px var(--p2-secondary);
+	transition: box-shadow 0.2s;
+}
+.vote-cont .text-cont .column2 button:active {
+	box-shadow: inset -5px -5px 5px var(--p2-secondary);
+}
+/*Bar Graph*/
+.bar-graph {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	z-index: -1;
+}
+.bar-graph img {
+	position: relative;
+	width: 75px;
+	margin: 5%;
+	height: auto;
+}
+.bar-graph .bar {
+	width: 10%;
+	height: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: grey;
+}
+.bar-graph .bar p {
+	color: white;
+	font-size: 20px;
+	font-family: "Quicksand";
+}
+.bar-graph .isaac-bar {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: var(--p1-secondary);
+}
+.bar-graph .isaac-bar .bar {
+	background-color: var(--p1-primary);
+}
+.bar-graph .wilhelm-bar {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: var(--p2-secondary);
+}
+.bar-graph .wilhelm-bar .bar {
+	background-color: var(--p2-primary);
+}
+
+/*======================= More ====================*/
 
 /*
 
