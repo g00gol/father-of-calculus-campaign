@@ -5,6 +5,43 @@ $(function () {
 
 // ============ Bar Graph =============
 
+// ============ Count ===========
+function count() {
+	$("#isaac-count").each(function () {
+		$(this)
+			.prop("Counter", 0)
+			.animate(
+				{
+					Counter: $(this).text(),
+				},
+				{
+					duration: 4000,
+					easing: "swing",
+					step: function (now) {
+						$(this).text(Math.ceil(now));
+					},
+				}
+			);
+	});
+
+	$("#wilhelm-count").each(function () {
+		$(this)
+			.prop("Counter", 0)
+			.animate(
+				{
+					Counter: $(this).text(),
+				},
+				{
+					duration: 4000,
+					easing: "swing",
+					step: function (now) {
+						$(this).text(Math.ceil(now));
+					},
+				}
+			);
+	});
+}
+
 // =========== Isaac Graph ==========
 function isaacGraph() {
 	document.getElementById("vote-text-cont").style.opacity = "0";
@@ -29,26 +66,10 @@ function isaacGraph() {
 		}
 	);
 
-	$("#count").text("55");
-
-	$("#count").each(function () {
-		$(this)
-			.prop("Counter", 0)
-			.animate(
-				{
-					Counter: $(this).text(),
-				},
-				{
-					duration: 4000,
-					easing: "swing",
-					step: function (now) {
-						$(this).text(Math.ceil(now));
-					},
-				}
-			);
-	});
-
-	$("#isaac-img").delay(4000).animate({ width: "100px" }, 1000);
+	$("#isaac-count").text("55");
+	$("#wilhelm-count").text("45");
+	count();
+	$("#isaac-img").delay(4000).animate({ width: "200px" }, 1000);
 }
 
 // ============ Wilhelm Graph =============
@@ -65,7 +86,7 @@ function wilhelmGraph() {
 			duration: 4000,
 		}
 	);
-	$("#wilhelm-bar").animate(
+	$("#isaac-bar").animate(
 		{
 			height: "45%",
 		},
@@ -75,24 +96,8 @@ function wilhelmGraph() {
 		}
 	);
 
-	$("#count").text("55");
-
-	$("#count").each(function () {
-		$(this)
-			.prop("Counter", 0)
-			.animate(
-				{
-					Counter: $(this).text(),
-				},
-				{
-					duration: 4000,
-					easing: "swing",
-					step: function (now) {
-						$(this).text(Math.ceil(now));
-					},
-				}
-			);
-	});
-
-	$("#wilhelm-img").delay(4000).animate({ width: "100px" }, 1000);
+	$("#wilhelm-count").text("55");
+	$("#isaac-count").text("45");
+	count();
+	$("#wilhelm-img").delay(4000).animate({ width: "200px" }, 1000);
 }
