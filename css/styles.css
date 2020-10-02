@@ -218,7 +218,7 @@ body::-webkit-scrollbar-thumb {
 .info .btn-cont {
 	position: relative;
 	width: 100%;
-	height: 35%;
+	height: 30%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -379,8 +379,14 @@ body::-webkit-scrollbar-thumb {
 #isaac-sn i {
 	color: var(--p1-secondary);
 }
+#isaac-sn i:hover {
+	color: var(--p1-primary);
+}
 #wilhelm-sn i {
 	color: var(--p2-secondary);
+}
+#wilhelm-sn i:hover {
+	color: var(--p2-primary);
 }
 .side-nav a {
 	width: fit-content;
@@ -507,6 +513,10 @@ body::-webkit-scrollbar-thumb {
 	font-size: 40px;
 	font-family: "Merriweather";
 }
+.isaac-contribution .text-cont h2 {
+	font-size: 20px;
+	font-family: "Merriweather";
+}
 .isaac-contribution .text-cont p {
 	font-size: 20px;
 	font-family: "Quicksand";
@@ -515,7 +525,12 @@ body::-webkit-scrollbar-thumb {
 /*================= Why Vote ==================*/
 .isaac-vote {
 	width: 100%;
-	height: 80%;
+	height: fit-content;
+	margin-bottom: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 }
 .isaac-vote .text-cont {
 	width: 70%;
@@ -665,7 +680,36 @@ body::-webkit-scrollbar-thumb {
 /*================= Why Vote ==================*/
 .wilhelm-vote {
 	width: 100%;
-	height: 80%;
+	height: fit-content;
+	margin-bottom: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+.wilhelm-vote .text-cont {
+	width: 70%;
+	height: fit-content;
+	margin-top: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.wilhelm-vote .text-cont img {
+	width: 750px;
+	height: auto;
+	margin: 5%;
+}
+.wilhelm-vote .text-cont h1 {
+	margin-left: 0;
+	margin-right: auto;
+	font-size: 40px;
+	font-family: "Merriweather";
+}
+.wilhelm-vote .text-cont p {
+	font-size: 20px;
+	font-family: "Quicksand";
 }
 
 /*
@@ -770,6 +814,12 @@ body::-webkit-scrollbar-thumb {
 	justify-content: center;
 	align-items: center;
 	background-color: grey;
+}
+.bar-graph p {
+	margin: 0;
+	color: white;
+	font-size: 15px;
+	font-family: "Quicksand";
 }
 .bar-graph .bar p {
 	color: white;

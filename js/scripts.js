@@ -7,7 +7,7 @@ $(function () {
 
 // ============ Count ===========
 function count() {
-	$("#isaac-count").each(function () {
+	$("#isaac-count, #wilhelm-count").each(function () {
 		$(this)
 			.prop("Counter", 0)
 			.animate(
@@ -23,8 +23,10 @@ function count() {
 				}
 			);
 	});
-
-	$("#wilhelm-count").each(function () {
+}
+// =========== Exact ============
+function exact() {
+	$("#isaac-exact, #wilhelm-exact").each(function () {
 		$(this)
 			.prop("Counter", 0)
 			.animate(
@@ -49,7 +51,7 @@ function isaacGraph() {
 
 	$("#isaac-bar").animate(
 		{
-			height: "55%",
+			height: "51%",
 		},
 		{
 			delay: 500,
@@ -58,7 +60,7 @@ function isaacGraph() {
 	);
 	$("#wilhelm-bar").animate(
 		{
-			height: "45%",
+			height: "49%",
 		},
 		{
 			delay: 500,
@@ -66,9 +68,12 @@ function isaacGraph() {
 		}
 	);
 
-	$("#isaac-count").text("55");
-	$("#wilhelm-count").text("45");
+	$("#isaac-count").text("51");
+	$("#isaac-exact").text("50358");
+	$("#wilhelm-count").text("49");
+	$("#wilhelm-exact").text("48383");
 	count();
+	exact();
 	$("#isaac-img").delay(4000).animate({ width: "200px" }, 1000);
 }
 
@@ -79,7 +84,7 @@ function wilhelmGraph() {
 
 	$("#wilhelm-bar").animate(
 		{
-			height: "55%",
+			height: "51%",
 		},
 		{
 			delay: 500,
@@ -88,7 +93,7 @@ function wilhelmGraph() {
 	);
 	$("#isaac-bar").animate(
 		{
-			height: "45%",
+			height: "49%",
 		},
 		{
 			delay: 500,
@@ -96,8 +101,11 @@ function wilhelmGraph() {
 		}
 	);
 
-	$("#wilhelm-count").text("55");
-	$("#isaac-count").text("45");
+	$("#wilhelm-count").text("51");
+	$("#wilhelm-exact").text("50358");
+	$("#isaac-count").text("49");
+	$("#isaac-exact").text("48383");
 	count();
+	exact();
 	$("#wilhelm-img").delay(4000).animate({ width: "200px" }, 1000);
 }
